@@ -1,0 +1,7 @@
+# Always there for activation
+RewriteEngine on
+
+# Rule to redirect the URL /paiement to /paiement.html
+RewriteRule paiement paiement.html
+
+# All rules are regular expressions

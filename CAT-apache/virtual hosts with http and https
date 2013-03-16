@@ -1,0 +1,33 @@
+# HTTP
+<VirtualHost *:80>
+    ServerName cookbook.pgon.ca
+    ServerAlias cookbook.pgon.ca
+    DocumentRoot /websites/cookbook.pgon.ca
+    
+    <Directory /websites/cookbook.pgon.ca>
+        AllowOverride All
+        Allow from All
+    </Directory>
+</VirtualHost>
+
+# HTTPS
+<VirtualHost *:443>
+    ServerName cookbook.pgon.ca
+    ServerAlias cookbook.pgon.ca
+
+    DocumentRoot /websites/cookbook.pgon.ca
+
+    SSLEngine on
+    SSLCertificateFile    /certificates/websites/cookbook.pgon.ca/crt
+    SSLCertificateKeyFile /certificates/websites/cookbook.pgon.ca/pem
+    
+    # --[If you need to add intermediate certificates]--
+    SSLCertificateChainFile /certificates/ca/sub.class2.server.ca.pem
+    SSLCACertificateFile /certificates/ca/ca.pem
+    # ------
+
+    <Directory /websites/cookbook.pgon.ca>
+        AllowOverride All
+        Allow from All
+    </Directory>
+</VirtualHost>
