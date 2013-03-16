@@ -1,0 +1,19 @@
+# Minutes, Hours, Days, Month, Day of the week, user, task
+
+# Once every minutes
+* * * * * user rm /home/user/tmp/*
+
+# Once a day at midnight
+0 0 * * * user rm /home/user/tmp/*
+
+# All mondays at midnight
+0 0 * * 1 user rm /home/user/tmp/*
+
+# Every 5 minutes (0, 5, 10, 15, ...)
+*/5 * * * * user rm /home/user/tmp/*
+
+# Every 5 minutes during work hours (9h à 17h) (0, 5, 10, 15, ...)
+*/5 9-17 * * * user rm /home/user/tmp/*
+
+# Every 2 hours during work hours (9h à 17h) (9h, 11h, 13h, ...)
+0 9-17/2 * * * user rm /home/user/tmp/*
