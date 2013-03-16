@@ -1,0 +1,25 @@
+In the file
+    oracle\app\oracle\product\11.2.0\server\network\ADMIN\tnsnames.ora
+	
+	
+
+
+REMOTE_WITH_SID = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 10521)) 
+    ) 
+    (CONNECT_DATA = 
+      (SID = THESID)
+    ) 
+  ) 
+
+REMOTE_WITH_SERVICE_NAME = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+      (ADDRESS = (PROTOCOL = TCP)(HOST = the.remote.host.com)(PORT = 1533)) 
+    ) 
+    (CONNECT_DATA = 
+      (SERVICE_NAME = THESERVICENAME)
+    ) 
+  )
