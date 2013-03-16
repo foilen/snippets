@@ -1,0 +1,9 @@
+<beans ...>
+
+...
+
+  <bean class="ca.pgon.theapplication.PrincipalBean"/>
+
+...
+
+</beans>
