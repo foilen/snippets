@@ -10,6 +10,10 @@ ssh -i /home/user/private.pem ec2-user@192.168.1.1
 ssh -p 2221 -i PATH_TO_PRIVATE_KEY USER@HOST_OR_IP
 ssh -p 2221 -i /home/user/private.pem ec2-user@192.168.1.1
 
+# Execute command
+ssh USER@HOST_OR_IP COMMAND
+ssh ec2-user@192.168.1.1 'echo hello'
+
 # Copy a file
 # Note that you can switch the local and remote parts to copy the other way
 scp LOCAL_FILE USER@HOST_OR_IP:REMOTE_FILE_OR_DIRECTORY
