@@ -1,5 +1,5 @@
 # 1- Create the private key
-openssl genrsa -des3 -out crypted_private_key.pem 1024
+openssl genrsa -des3 -out crypted_private_key.pem 4096
 
 # 2- Create the certificate request
 # Note: The common name is the site name (ex: cookbook.pgon.ca)
