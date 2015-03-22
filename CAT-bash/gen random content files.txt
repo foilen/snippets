@@ -1,0 +1,14 @@
+# 1000 files of 1MB (total 1GB)
+for i in {1..1000} ; do
+  dd if=/dev/urandom of=$i.bin bs=1M count=1
+done
+
+# 100 files of 10MB (total 1GB)
+for i in {1..100} ; do
+  dd if=/dev/urandom of=$i.bin bs=10M count=1
+done
+
+# 10 files of 100MB (total 1GB)
+for i in {1..10} ; do
+  dd if=/dev/urandom of=$i.bin bs=100M count=1
+done
